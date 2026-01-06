@@ -50,7 +50,6 @@ def call_gemini_safe(prompt_text):
             final_text = content # It was already a normal string
 
         # Step 2: The "Scrubber" - Remove Markdown Backticks
-        # This removes ```python, ```, and trailing whitespace
         final_text = final_text.replace("```python", "").replace("```", "").strip()
         
         return final_text
